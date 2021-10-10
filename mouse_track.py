@@ -5,7 +5,7 @@ from pynput.mouse import Controller
 def percentage(part, whole):
     percentage = 100 * float(part) / float(whole)
     return str(int(percentage)) + "%"
-
+x=3
 
 mouse = Controller()
 
