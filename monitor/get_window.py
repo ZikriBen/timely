@@ -5,8 +5,8 @@ import PIL.ImageGrab
 import psutil
 
 total = 15
-
 timeout = time.time() + total
+
 apps = {
     # "chrome.exe": {
     #     "total_usage": 0,
