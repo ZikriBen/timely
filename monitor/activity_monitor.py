@@ -1,6 +1,9 @@
 import time
+import json
+from pathlib import Path
 from pynput import mouse
 from pynput import keyboard
+from datetime import datetime
 from threading import Thread
 
 
@@ -59,7 +62,7 @@ class ActivityMonitor():
         percentage = 100 * float(part) / float(whole)
         return str(int(percentage)) + "%"
 
-    def thread_monitoring(self):
+    def thread_monitoring(self, log_file):
         while self.running:
             if self.activity:
                 current_time = time.time()
@@ -80,17 +83,26 @@ class ActivityMonitor():
         delta = current_time - self.start_time
         if delta > self.min_stop:
             self.stops.append((delta, self.start_time, current_time))
+        
+        with open(log_file, 'w') as f:
+            json.dump(self.stops, f)
+        
 
     def start_monitor(self):
         self.running = True
         self.stops = []
-        self.start_time = time.time()
+        now = time.time()
+        self.timeout = now + self.total
+        self.start_time = now
         self.activity = False
+        log_dir = Path(r"./logs")
+        log_dir.mkdir(parents=True, exist_ok=True)
+        log_file = Path(fr"./logs/activity_log{datetime.now().strftime('%d-%m-%Y_%I-%M-%S%p')}.json")
 
         self.k_listener = keyboard.Listener(on_press=self.on_press, on_release=self.on_release).start()
         self.m_listener = mouse.Listener(on_click=self.on_click, on_move=self.on_move, on_scroll=self.on_scroll).start()
         
-        Thread(target=self.thread_monitoring, args=()).start()
+        Thread(target=self.thread_monitoring, args=(log_file,)).start()
     
     def stop_monitor(self):
         self.running = False
@@ -105,5 +117,3 @@ class ActivityMonitor():
 if __name__ == "__main__":
     active_monitor = ActivityMonitor()
     active_monitor.start_monitor()
-    time.sleep(3)
-    active_monitor.stop_monitor()

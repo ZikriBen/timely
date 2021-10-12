@@ -6,7 +6,7 @@ class ActivityServer:
 
     def __init__(self):
         self.app = Flask(__name__)
-        self.acticity_monitor = ActivityMonitor()
+        self.acticity_monitor = ActivityMonitor(min_stop=2, total=10)
 
         @self.app.route('/')
         def hello_world():

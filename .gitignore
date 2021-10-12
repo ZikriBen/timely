@@ -1,5 +1,6 @@
 .DS_STORE
 test_*
+logs/
 /dist/
 /bazel-out
 /integration/bazel/bazel-*
