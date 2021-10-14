@@ -15,8 +15,11 @@ export class HomeComponent implements OnInit {
 
   startMonitor(){
 this.monitorDataService.startMonitor().subscribe(data=>{
-
+        console.log(data)
 })
+
+
+
   }
 stopMonitor(){
 this.monitorDataService.stopMonitor().subscribe(data=>{
