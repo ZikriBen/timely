@@ -8,14 +8,14 @@ export class MonitorDataService {
 
   constructor(private _http:HttpClient) { }
 
-apiUrl:string="https://localhost:44312/api/Products";
+apiUrl:string="http://10.0.0.2:4200/";
 
 startMonitor(){
-    return this._http.get(this.apiUrl);
+    return this._http.get<string>(this.apiUrl+'monitor_on');
 
 }
 stopMonitor(){
-    return this._http.get(this.apiUrl);
+    return this._http.get(this.apiUrl+'/monitor_off');
 
 }
 }
