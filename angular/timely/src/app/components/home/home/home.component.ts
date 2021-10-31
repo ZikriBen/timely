@@ -23,8 +23,16 @@ this.monitorDataService.startMonitor().subscribe(data=>{
   }
 stopMonitor(){
 this.monitorDataService.stopMonitor().subscribe(data=>{
+       if (data!=null){
+         console.log(JSON.stringify(data) )
+       }
 
 })
 }
+statusMonitor(){
+this.monitorDataService.statusMonitor().subscribe(data=>{
+        console.log(data)
 
+})
+}
 }
