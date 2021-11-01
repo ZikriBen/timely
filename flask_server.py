@@ -19,7 +19,8 @@ class ActivityServer:
 
         @self.app.route('/monitor_on', methods=["POST"])
         def start_monitoring():
-            self.acticity_monitor.start_monitor()
+            if self.acticity_monitor.start_monitor() != 0:
+                return 'Monitor is already running!'
             return 'Monitor started!'
         
         @self.app.route('/monitor_off', methods=["POST"])

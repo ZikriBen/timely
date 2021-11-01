@@ -8,7 +8,7 @@ from threading import Thread
 
 
 class ActivityMonitor():
-    def __init__(self, min_stop=2, total=15) -> None:
+    def __init__(self, min_stop=2, total=60) -> None:
         self.total = total
         self.min_stop = min_stop
         self.mouse_c = mouse.Controller()
@@ -89,6 +89,9 @@ class ActivityMonitor():
         
 
     def start_monitor(self):
+        if self.running:
+            return 1
+
         self.running = True
         self.stops = []
         now = time.time()
@@ -103,6 +106,8 @@ class ActivityMonitor():
         self.m_listener = mouse.Listener(on_click=self.on_click, on_move=self.on_move, on_scroll=self.on_scroll).start()
         
         Thread(target=self.thread_monitoring, args=(log_file,)).start()
+
+        return 0
     
     def stop_monitor(self):
         self.running = False
