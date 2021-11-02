@@ -1,0 +1,31 @@
+[33ma76227b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Merge branch 'main' of https://github.com/ZikriBen/timely
+[33m57c65a9[m fix http request
+[33meea7d07[m added snapshot mode, and searching for text in images
+[33m8b3fb77[m Merge pull request #7 from ZikriBen/arielHomePage
+[33m04747e5[m[33m ([m[1;31morigin/arielHomePage[m[33m, [m[1;32marielHomePage[m[33m)[m http
+[33m0a7b2bd[m http request
+[33mcaba7b4[m added CORS headers
+[33m2c3c12b[m build home page and nav bar
+[33ma742694[m Merge branch 'main' of https://github.com/ZikriBen/timely
+[33m43adada[m added logging to local folder under ./logs folder
+[33m93222b3[m Merge pull request #5 from ZikriBen/ariel/angularClient
+[33m0bee8e0[m added gome page
+[33m872e57f[m remove unnecessary files
+[33m07dc183[m Merge pull request #4 from ZikriBen/ben/flask-api
+[33m3d36885[m added Flask server with minimal workflow of monitoring
+[33mcdf8f1f[m add bootstrap libary
+[33m8da668c[m Merge pull request #3 from ZikriBen/ariel/angularClient
+[33m8c11986[m uplod all the angular files
+[33m9922afc[m del files
+[33mddc651e[m del ben trash files
+[33ma7d4ceb[m remove trash
+[33m62e14af[m Merge pull request #2 from ZikriBen/ben/flask_test
+[33ma067f4e[m added simple flask server
+[33mc2bd653[m added to gitignore
+[33m625c7cb[m Merge branch 'main' of https://github.com/ZikriBen/timely
+[33mf9ec9e7[m add gitignore
+[33m45aa60e[m hello
+[33mcec3914[m All files
+[33m92bdfef[m hey
+[33m89529f4[m hello ben
+[33m4bfeac6[m Initial commit

@@ -1,15 +1,15 @@
 
-.center{
-    position: fixed;
-    width: 500px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    /* Negative half of height. */
-    margin-left: -250px;
-    /* Negative half of width. */
-}
+// .center{
+//     position: fixed;
+//     width: 500px;
+//     height: 200px;
+//     top: 50%;
+//     left: 50%;
+//     margin-top: -100px;
+//     /* Negative half of height. */
+//     margin-left: -250px;
+//     /* Negative half of width. */
+// }
 
 
   .btn-start {
@@ -36,4 +36,20 @@
     color: white;
     text-align: center;
     cursor: pointer;
+  }
+  .btn-status {
+    height: 100px;
+    line-height: 100px;
+    width: 111px;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .time{
+    position: absolute;
   }
