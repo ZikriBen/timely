@@ -13,12 +13,23 @@
 <span class="col">
 <button class="btn-status"  (click)="statusMonitor()">Status </button>
 </span>
-<!-- <span class="col">
+<span class="col">
+  <h1>Total Time</h1>
+  <h2>{{time|date:'mm:ss'}}</h2>
+</span>
+<span class="col">
   <h1>Time You West</h1>
-  <h2>{{endTime}}</h2>
-</span> -->
+  <h2>{{noChangedMadeTime?(noChangedMadeTime*1000|date:'mm:ss'):''}}</h2>
+</span>
+<span class="col">
+  <h1>Time You Worked</h1>
+  <h2>{{workTime|date:'mm:ss'}}</h2>
+</span>
 
 
+</div>
+<div class="row" *ngIf="isLoading">
+  <div class="loader"></div>
 </div>
 
 </div>
