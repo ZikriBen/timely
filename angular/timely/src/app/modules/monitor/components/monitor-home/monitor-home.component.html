@@ -1,6 +1,5 @@
- <div class="center container">
-<h1 >Try Timely</h1>
-<div class="row">
+  <div class="continer">
+  <div class="row">
     <span class="col">
 <button class="btn-start"  (click)="startMonitor()">Start </button>
 </span>
@@ -13,24 +12,26 @@
 <span class="col">
 <button class="btn-status"  (click)="statusMonitor()">Status </button>
 </span>
-<span class="col">
+
+<div class="row ">
+<span class="col" *ngIf="activityMonitor">
   <h1>Total Time</h1>
-  <h2>{{time|date:'mm:ss'}}</h2>
+  {{activityMonitor.total_time}}
 </span>
-<span class="col">
+<span class="col" *ngIf="activityMonitor">
   <h1>Time You West</h1>
-  <h2>{{noChangedMadeTime?(noChangedMadeTime*1000|date:'mm:ss'):''}}</h2>
+  {{activityMonitor.non_active_time}}
+
 </span>
-<span class="col">
+<span class="col" *ngIf="activityMonitor">
   <h1>Time You Worked</h1>
-  <h2>{{workTime|date:'mm:ss'}}</h2>
+  {{activityMonitor.active_time}}
+
 </span>
 
-
+</div>
+</div>
 </div>
 <div class="row" *ngIf="isLoading">
   <div class="loader"></div>
 </div>
-
-</div>
-
