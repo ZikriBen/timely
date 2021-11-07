@@ -1,0 +1,17 @@
+{
+    "activity_monitor": {
+        "min_stop": 15,
+        "total": 10800,
+        "log_folder": "C:\\Personal\\timely\\monitor\\logs\\activity"
+    },
+    "focus_monitor": {
+        "total": 10800,
+        "log_folder": "C:\\Personal\\timely\\monitor\\logs\\focus"
+    },
+    "snapshot_monitor":{
+        "interval" : 10,
+        "compression": 9,
+        "prefix": "",
+        "log_folder": "C:\\Personal\\timely\\monitor\\logs\\snapshot"
+    }
+}
