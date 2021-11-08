@@ -1,37 +1,13 @@
-  <div class="continer">
-  <div class="row">
-    <span class="col">
-<button class="btn-start"  (click)="startMonitor()">Start </button>
-</span>
-<br>
-<span class="col">
-<button class="btn-stop"  (click)="stopMonitor()">Stop </button>
-</span>
-<br>
 
-<span class="col">
-<button class="btn-status"  (click)="statusMonitor()">Status </button>
-</span>
 
-<div class="row ">
-<span class="col" *ngIf="activityMonitor">
-  <h1>Total Time</h1>
-  {{activityMonitor.total_time}}
-</span>
-<span class="col" *ngIf="activityMonitor">
-  <h1>Time You West</h1>
-  {{activityMonitor.non_active_time}}
 
-</span>
-<span class="col" *ngIf="activityMonitor">
-  <h1>Time You Worked</h1>
-  {{activityMonitor.active_time}}
+  <h1 class="text-center">Welcome To Monitor Section</h1>
 
-</span>
+  <div class="container text-center">
 
-</div>
-</div>
-</div>
-<div class="row" *ngIf="isLoading">
-  <div class="loader"></div>
-</div>
+
+    <app-monitor-data></app-monitor-data>
+  </div>
+
+
+

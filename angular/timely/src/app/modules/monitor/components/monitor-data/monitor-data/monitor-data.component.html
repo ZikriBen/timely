@@ -1,0 +1,42 @@
+ <div class="row">
+    <span class="col">
+<button mat-raised-button  (click)="startMonitor()">Start</button>
+</span>
+<br>
+<span class="col">
+<button mat-raised-button color="primary" (click)="stopMonitor()">Stop</button>
+</span>
+<br>
+
+<span class="col">
+<button mat-raised-button color="warn" [disabled]="this.localStorageService.getItem('activityMonitor') === null" (click)="moveToHistory()">History</button>
+</span>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row" *ngIf="activityMonitor" >
+  <app-monitor-card
+  [percentage]="activityMonitor.percentage"
+  [activeTime]="activityMonitor.active_time"
+  [nonActiveTime]="activityMonitor.non_active_time"
+  [totalTime]="activityMonitor.total_time"
+  [startTotalTime]="activityMonitor.start_total_time"
+  [endTotalTime]="activityMonitor.end_total_time"
+  ></app-monitor-card>
+
+
+</div>
+</div>
+
+<div class="row" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>

@@ -1,0 +1,34 @@
+ <form [formGroup]="monitorSetting">
+
+
+
+
+<div class="row">
+    <h1>Choose youre monitor Setting</h1>
+    </div>
+<div class="row align-items-center">
+  <div class="col-2">
+   <select id="totalTime" class="form-select"
+   formControlName="totalTime">
+  <option *ngFor="let time of times">{{time}}</option>
+</select>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-2">
+    <input class="form-control" type="text" placeholder="Seconds">
+    </div>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-2">
+  <button class="btn btn-primary">Submit</button>
+  </div>
+</div>
+</div>
+</form>
+

@@ -1,0 +1,21 @@
+<div class="container" >
+<h1 class="text-center">Monitor History</h1>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <ng-container>
+    <mat-grid-tile *ngFor="let monitor of activityMonitors">
+     <app-monitor-card
+  [percentage]="monitor.percentage"
+  [activeTime]="monitor.active_time"
+  [nonActiveTime]="monitor.non_active_time"
+  [totalTime]="monitor.total_time"
+  [startTotalTime]="monitor.start_total_time"
+  [endTotalTime]="monitor.end_total_time"
+  ></app-monitor-card>
+    </mat-grid-tile>
+  </ng-container>
+  <mat-grid-tile></mat-grid-tile>
+
+</mat-grid-list>
+
+
+</div>

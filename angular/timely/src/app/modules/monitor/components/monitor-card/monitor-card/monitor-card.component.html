@@ -1,0 +1,30 @@
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>Monitor Results</mat-card-title>
+
+  </mat-card-title-group>
+  <mat-card-content>
+    <div class="row">
+    <div class="col">
+  <h3>Total Time: {{totalTime*1000|date:'mm:ss'}}</h3>
+  <h3>Worked Time: {{activeTime*1000 |date:'mm:ss'}}</h3>
+  <h3>West Time: {{nonActiveTime*1000 |date:'mm:ss'}}</h3>
+</div>
+<div class="col">
+<h3>Start Time:  {{startTotalTime*1000 |date : 'hh:mm:ss'}}</h3>
+<h3>End Time:  {{endTotalTime*1000 |date : 'hh:mm:ss'}}</h3>
+
+</div>
+
+
+</div>
+ <mat-progress-spinner
+
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+    </mat-progress-spinner>
+    {{this.value+'%'}}
+
+  </mat-card-content>
+</mat-card>
