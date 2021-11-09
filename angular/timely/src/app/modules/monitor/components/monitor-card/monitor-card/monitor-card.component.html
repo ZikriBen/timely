@@ -6,13 +6,13 @@
   <mat-card-content>
     <div class="row">
     <div class="col">
-  <h3>Total Time: {{totalTime*1000|date:'mm:ss'}}</h3>
-  <h3>Worked Time: {{activeTime*1000 |date:'mm:ss'}}</h3>
-  <h3>West Time: {{nonActiveTime*1000 |date:'mm:ss'}}</h3>
+  <h3>Total Time: {{totalTime*1000|date:'HH:mm:ss':'UTC'}}</h3>
+  <h3>Worked Time: {{activeTime*1000 |date:'HH:mm:ss':'UTC'}}</h3>
+  <h3>West Time: {{nonActiveTime*1000 |date:'HH:mm:ss':'UTC'}}</h3>
 </div>
 <div class="col">
-<h3>Start Time:  {{startTotalTime*1000 |date : 'hh:mm:ss'}}</h3>
-<h3>End Time:  {{endTotalTime*1000 |date : 'hh:mm:ss'}}</h3>
+<h3>Start Time:  {{startTotalTime*1000 |date : 'HH:mm:ss'}}</h3>
+<h3>End Time:  {{endTotalTime*1000 |date : 'HH:mm:ss'}}</h3>
 
 </div>
 
