@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MonitorHistoryComponent } from './modules/monitor/components/monitor-history/monitor-history.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatSidenavModule } from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatCardModule,
     MatProgressSpinnerModule,
     MatGridListModule,
+    ScrollingModule,
+    MatSidenavModule,
   ],
   providers: [HttpClient, HttpClientModule],
   bootstrap: [AppComponent],

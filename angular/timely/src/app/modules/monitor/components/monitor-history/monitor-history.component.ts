@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivityMonitor } from '../../models/activity-monitor';
 import { LocalStorageService } from '../../services/local-storage.service';
 
@@ -6,6 +6,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
   selector: 'app-monitor-history',
   templateUrl: './monitor-history.component.html',
   styleUrls: ['./monitor-history.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MonitorHistoryComponent implements OnInit {
   public activityMonitors: ActivityMonitor[];

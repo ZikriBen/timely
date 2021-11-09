@@ -1,8 +1,11 @@
 <div class="container" >
 <h1 class="text-center">Monitor History</h1>
+    <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
+
 <mat-grid-list cols="3" rowHeight="3:3">
+
   <ng-container>
-    <mat-grid-tile *ngFor="let monitor of activityMonitors">
+    <mat-grid-tile *cdkVirtualFor="let monitor of activityMonitors">
      <app-monitor-card
   [percentage]="monitor.percentage"
   [activeTime]="monitor.active_time"
@@ -13,9 +16,9 @@
   ></app-monitor-card>
     </mat-grid-tile>
   </ng-container>
-  <mat-grid-tile></mat-grid-tile>
 
 </mat-grid-list>
+    </cdk-virtual-scroll-viewport>
 
 
 </div>
